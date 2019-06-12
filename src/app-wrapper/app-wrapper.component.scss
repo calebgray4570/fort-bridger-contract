@@ -1,0 +1,27 @@
+.header {
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-content: center;
+  // align-items: center;
+  .header-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 30vh;
+    max-height: 30vh;
+    width: 100%;
+    background-image: url('https://i.imgur.com/exV2BaC.jpg?1');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    span {
+      font-size: 5em;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgba($color: #641f1f, $alpha: 0.5)
+    }
+
+  }
+}
