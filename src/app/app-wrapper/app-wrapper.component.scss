@@ -1,0 +1,94 @@
+#btn-flx {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  .header-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30vh;
+    max-height: 30vh;
+    width: 100%;
+    background-image: url('https://i.imgur.com/exV2BaC.jpg?1');
+    background-size: 100% 111%;
+    background-repeat: no-repeat;
+
+    span {
+      font-size: 8em;
+      font-weight: bold;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgba(60, 6, 6, 0.67);
+      word-wrap: none;
+      white-space: nowrap;
+    }
+
+    .nav-wrap {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: 10vh;
+      width: 75%;
+      background-image: url('https://i.imgur.com/1fPS6RX.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      bottom: -1.5em;
+
+      a:link,
+      a:visited {
+        color: white;
+        background-color: rgba(101, 70, 63, 0.9);
+        height: 3em;
+        width: 11.5em;
+        text-decoration: transparent;
+        display: inline-block;
+        border-radius: 5px;
+      }
+
+      a:hover,
+      a:active {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.app-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  width: 100%;
+  // border: 1px solid red;
+  background-color: rgb( 237, 231, 221);
+  .left {
+    height: 70vh;
+    width: 14%;
+    background-image: url('https://i.imgur.com/wSYsjbR.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    // border: 1px solid blue;
+  }
+  .center {
+    height: 70vh;
+    width: 72%;
+    // border: 1px solid red;
+  }
+  .right {
+    height: 70vh;
+    width: 14%;
+    background-image: url('https://i.imgur.com/ROUbdAp.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
