@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppWrapperComponent } from 'src/app-wrapper/app-wapper.component';
+import { AppWrapperComponent } from './app-wrapper/app-wapper.component';
 
 @NgModule({
   declarations: [
