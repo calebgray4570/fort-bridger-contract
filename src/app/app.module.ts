@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { AppWrapperComponent } from './app-wrapper/app-wapper.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
+import { TabTwoComponent } from './tab-two/tab-two.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppWrapperComponent,
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    TabTwoComponent
   ],
   imports: [
     BrowserModule,
