@@ -8,6 +8,7 @@ import { AppWrapperComponent } from './app-wrapper/app-wapper.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { TabTwoComponent } from './tab-two/tab-two.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TabTwoComponent } from './tab-two/tab-two.component';
     AppWrapperComponent,
     HomeComponent,
     CarouselComponent,
-    TabTwoComponent
+    TabTwoComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
