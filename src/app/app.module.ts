@@ -1,14 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import bootstrap from "bootstrap";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppWrapperComponent } from 'src/app-wrapper/app-wapper.component';
+import { AppWrapperComponent } from './app-wrapper/app-wapper.component';
+import { HomeComponent } from './home/home.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
+import { TabTwoComponent } from './tab-two/tab-two.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppWrapperComponent
+    AppWrapperComponent,
+    HomeComponent,
+    CarouselComponent,
+    TabTwoComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

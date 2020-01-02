@@ -1,0 +1,30 @@
+.app-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    width: 100%;
+    // border: 1px solid red;
+    background-color: rgb( 237, 231, 221);
+    .left {
+      height: 70vh;
+      width: 14%;
+      background-image: url('https://i.imgur.com/wSYsjbR.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      // border: 1px solid blue;
+    }
+    .center {
+      height: 70vh;
+      width: 72%;
+      // border: 1px solid red;
+    }
+    .right {
+      height: 70vh;
+      width: 14%;
+      background-image: url('https://i.imgur.com/ROUbdAp.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
