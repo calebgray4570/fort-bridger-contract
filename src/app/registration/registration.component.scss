@@ -1,0 +1,21 @@
+.registration {
+    height: 100%;
+    overflow: auto;
+}
+.logo-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 1em;     
+}
