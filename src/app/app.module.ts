@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { TabTwoComponent } from './tab-two/tab-two.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { FbraBoardComponent } from './fbra-board/fbra-board.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegistrationComponent } from './registration/registration.component';
     HomeComponent,
     CarouselComponent,
     TabTwoComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    FbraBoardComponent
   ],
   imports: [
     BrowserModule,

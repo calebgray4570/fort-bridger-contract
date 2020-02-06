@@ -13,6 +13,13 @@
 //     align-items: center;
 // }
 
+.state-link-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .statue-img {
     position: relative;
     min-height: 45em;

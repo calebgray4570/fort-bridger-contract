@@ -1,0 +1,39 @@
+.fbra-board {
+    // margin-top: 3em;
+    height: 100%;
+    overflow: auto;
+}
+.contact-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    p {
+        text-align: center;
+    };
+}
+.board-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 60%;
+    };
+}
+
+.member-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    p {
+        margin-bottom: 0.2em;
+    }
+    img {
+        width: 25%;
+    }
+}
