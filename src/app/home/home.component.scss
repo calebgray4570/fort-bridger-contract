@@ -1,17 +1,10 @@
 .home {
     overflow: auto;
     height: 100%;
-    // margin-top: 1.3em;
     padding: 1em;
-    background-color: white;
+    background-color: rgb( 237, 231, 221);
     box-sizing: border-box;
 }
-// .carousel-wrap {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-// }
 
 .state-link-wrap {
     display: flex;
@@ -35,4 +28,16 @@
         z-index: 1;
         cursor: pointer;
     }
+}
+
+.doc-wrap {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    padding: 3em;
+    // embed {
+    //     min-height: 45em;
+    //     width: 90%;
+    // }
 }

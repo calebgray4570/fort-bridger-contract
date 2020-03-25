@@ -1,0 +1,18 @@
+.rules-and-regs {
+    height: 100%;
+    overflow: auto;
+}
+.link {
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 1em;
+}
+.doc-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0em 3em;
+    embed {
+        min-height: 45em;
+        width: 90%;
+    }
+}

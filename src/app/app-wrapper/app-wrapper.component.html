@@ -1,12 +1,18 @@
 <div class="header">
-    <div class="header-img">
-        <span>Fort Bridger Rendezvous</span>
+    <div class="header-img" [ngClass]="{'img-hidden': !imgShow}">
+        <span class="header-title">Fort Bridger Rendezvous</span>
         <div class="nav-wrap">
-            <a id="btn-flx" routerLink="" routerLinkActive="active">Home</a>
-            <a id="btn-flx" routerLink="tab-two" routerLinkActive="active">Maps</a>
-            <a id="btn-flx" routerLink="registration" routerLinkActive="active">Registration</a>
-            <a id="btn-flx" href="fbra-board">FBRA Board</a>
-            <a id="btn-flx" href="">2019 SCHEDULE</a>
+            <a class="nav-btn" id="btn-flx" routerLink="" routerLinkActive="active">Home</a>
+            <a class="nav-btn" id="btn-flx" routerLink="maps" routerLinkActive="active">Maps</a>
+            <a class="nav-btn" id="btn-flx" routerLink="registration" routerLinkActive="active">Registration</a>
+            <a class="nav-btn" id="btn-flx" href="fbra-board">FBRA Board</a>
+            <div class="dropdown">
+                <a class="nav-btn" id="btn-flx" href="javascript:void(0)"><span> Info </span> <i class="down"></i></a>
+                <div class="dropdown-content">
+                    <a routerLink="events" routerLinkActive="active">Fort Bridger Events 2020</a>
+                    <a routerLink="rules-and-regulations" routerLinkActive="active">Rules and Regulations</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

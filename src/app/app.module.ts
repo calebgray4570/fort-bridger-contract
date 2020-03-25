@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import bootstrap from "bootstrap";
 
@@ -7,9 +8,11 @@ import { AppComponent } from './app.component';
 import { AppWrapperComponent } from './app-wrapper/app-wapper.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
-import { TabTwoComponent } from './tab-two/tab-two.component';
+import { MapsComponent } from './maps/maps.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FbraBoardComponent } from './fbra-board/fbra-board.component';
+import { EventsComponent } from './events/events.component';
+import { RulesAndRegsComponent } from './rules-and-regs/rules-and-regs.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { FbraBoardComponent } from './fbra-board/fbra-board.component';
     AppWrapperComponent,
     HomeComponent,
     CarouselComponent,
-    TabTwoComponent,
+    MapsComponent,
     RegistrationComponent,
-    FbraBoardComponent
+    FbraBoardComponent,
+    EventsComponent,
+    RulesAndRegsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

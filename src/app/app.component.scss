@@ -1,13 +1,24 @@
+app-wrapper {
+  z-index: 1000;
+  min-height: 30vh;
+  max-height: 30vh;
+}
+
 .app-body {
+    padding-top: 30vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    min-height: 70vh;
+    align-items: flex-start;
+    // height: 70vh;
+    // min-height: 70vh;
     width: 100%;
     // border: 1px solid red;
     background-color: rgb( 237, 231, 221);
     .left {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 12%;
       height: 70vh;
       width: 14%;
       background-image: url('https://i.imgur.com/wSYsjbR.png');
@@ -16,15 +27,19 @@
       // border: 1px solid blue;
     }
     .center {
-      height: 70vh;
+      // height: 70vh;
       width: 72%;
       // border: 1px solid red;
     }
     .right {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 12%;
       height: 70vh;
       width: 14%;
       background-image: url('https://i.imgur.com/ROUbdAp.png');
       background-size: 100% 100%;
       background-repeat: no-repeat;
+      // border: 1px solid blue;
     }
   }
