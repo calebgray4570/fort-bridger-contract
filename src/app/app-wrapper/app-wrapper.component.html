@@ -1,15 +1,28 @@
 <div class="header">
     <div class="header-img" [ngClass]="{'img-hidden': !imgShow}">
-        <span class="header-title">Fort Bridger Rendezvous</span>
+        <span class="header-title"><span>Fort Bridger Rendezvous</span></span>
         <div class="nav-wrap">
-            <a class="nav-btn" id="btn-flx" routerLink="" routerLinkActive="active">Home</a>
-            <a class="nav-btn" id="btn-flx" routerLink="maps" routerLinkActive="active">Maps</a>
-            <a class="nav-btn" id="btn-flx" routerLink="registration" routerLinkActive="active">Registration</a>
-            <a class="nav-btn" id="btn-flx" href="fbra-board">FBRA Board</a>
-            <div class="dropdown">
-                <a class="nav-btn" id="btn-flx" href="javascript:void(0)"><span> Info </span> <i class="down"></i></a>
+            <a class="nav-btn btn-size" id="btn-flx" routerLink="" routerLinkActive="active">Home</a>
+            <a class="nav-btn btn-size" id="btn-flx" routerLink="maps" routerLinkActive="active">Maps</a>
+            <a class="nav-btn btn-size" id="btn-flx" routerLink="registration" routerLinkActive="active">Registration</a>
+            <a class="nav-btn btn-size" id="btn-flx" routerLink="fbra-board" routerLinkActive="active">FBRA Board</a>
+            <div class="dropdown btn-size">
+                <a class="nav-btn " id="btn-flx" href="javascript:void(0)"><span> Info </span> <i class="down"></i></a>
                 <div class="dropdown-content">
                     <a routerLink="events" routerLinkActive="active">Fort Bridger Events 2020</a>
+                    <a routerLink="rules-and-regulations" routerLinkActive="active">Rules and Regulations</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wrap-mobile">
+            <div class="dropdown btn-size">
+                <a class="nav-btn" id="btn-flx" href="javascript:void(0)"><span> Menu </span></a>
+                <div class="dropdown-content">
+                    <a routerLink="" routerLinkActive="active">Home</a>
+                    <a routerLink="events" routerLinkActive="active">Fort Bridger Events 2020</a>
+                    <a routerLink="maps" routerLinkActive="active">Maps</a>
+                    <a routerLink="registration" routerLinkActive="active">Registration</a>
+                    <a routerLink="fbra-board" routerLinkActive="active">FBRA Board</a>
                     <a routerLink="rules-and-regulations" routerLinkActive="active">Rules and Regulations</a>
                 </div>
             </div>

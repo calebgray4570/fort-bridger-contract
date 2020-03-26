@@ -10,36 +10,77 @@ app-wrapper {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    // height: 70vh;
-    // min-height: 70vh;
     width: 100%;
-    // border: 1px solid red;
     background-color: rgb( 237, 231, 221);
-    .left {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 12%;
-      height: 70vh;
-      width: 14%;
-      background-image: url('https://i.imgur.com/wSYsjbR.png');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      // border: 1px solid blue;
-    }
-    .center {
-      // height: 70vh;
-      width: 72%;
-      // border: 1px solid red;
-    }
-    .right {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 12%;
-      height: 70vh;
-      width: 14%;
-      background-image: url('https://i.imgur.com/ROUbdAp.png');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      // border: 1px solid blue;
-    }
   }
+
+  .left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12%;
+    height: 70vh;
+    width: 14%;
+    background-image: url('https://i.imgur.com/wSYsjbR.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .center {
+    width: 72%;
+  }
+  .right {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12%;
+    height: 70vh;
+    width: 14%;
+    background-image: url('https://i.imgur.com/ROUbdAp.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+@media only screen and (max-width: 599px) {
+  .app-body {
+    padding-top: 12vh;
+  }
+  .left {
+    display: none;
+  }
+  .center {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 849px) {
+  .app-body {
+    padding-top: 18vh;
+  }
+  .left {
+    display: none;
+  }
+  .center {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1100px) {
+  .app-body {
+    padding-top: 22vh;
+  }
+
+  .left {
+    width: 18%;
+  }
+  .center {
+    width: 64%;
+  }
+  .right {
+    width: 18%;
+  }
+}
+

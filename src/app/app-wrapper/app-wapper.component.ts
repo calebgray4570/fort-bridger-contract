@@ -16,15 +16,9 @@ import {
   throttleTime
 } from 'rxjs/operators';
 
-enum VisibilityState {
-  Visible = 'visible',
-  Hidden = 'hidden'
-}
+type VisibilityState = 'visable' | 'hiddenSmall' | 'hidden';
+type Direction = 'up' | 'down';
 
-enum Direction {
-  Up = 'Up',
-  Down = 'Down'
-}
 @Component({
   selector: 'app-wrapper',
   templateUrl: './app-wrapper.component.html',
@@ -32,11 +26,15 @@ enum Direction {
   animations: [
     trigger('toggle', [
       state(
-        VisibilityState.Hidden,
+        'hidden',
         style({ opacity: 1, transform: 'translateY(-70%)' })
       ),
       state(
-        VisibilityState.Visible,
+        'hiddenSmall',
+        style({opacity: 1, transform: 'translateY(-45%)' })
+      ),
+      state(
+        'visable',
         style({ opacity: 1, transform: 'translateY(0)' })
       ),
       transition('* => *', animate('200ms ease-in'))
@@ -45,12 +43,17 @@ enum Direction {
 })
 export class AppWrapperComponent implements AfterViewInit {
   public imgShow = true;
+  public headerToggle: VisibilityState = 'visable';
+  public directionToggle: Direction;
   private isVisible = true;
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {
     window.pageYOffset <= 50 ? this.imgShow = true : this.imgShow = false;
-    return this.isVisible && window.pageYOffset <= 50 ? VisibilityState.Visible : VisibilityState.Hidden;
+    window.pageYOffset <= 50 ? this.isVisible = true : this.isVisible = false;
+    return this.isVisible && window.pageYOffset <= 50 ? this.headerToggle = 'visable' : 
+           !this.isVisible  && window.innerWidth <= 1100 ? this.headerToggle = 'hiddenSmall' : 
+           this.headerToggle = 'hidden';
   }
 
   ngAfterViewInit() {
@@ -58,20 +61,20 @@ export class AppWrapperComponent implements AfterViewInit {
       throttleTime(10),
       map(() => window.pageYOffset),
       pairwise(),
-      map(([y1, y2]): Direction => (y2 < y1 ? Direction.Up : Direction.Down)),
+      map(([y1, y2]): Direction => (y2 < y1 ? 'up' : 'down')),
       distinctUntilChanged(),
       share()
     );
 
     const goingUp$ = scroll$.pipe(
-      filter(direction => direction === Direction.Up)
+      filter(direction => direction === 'up')
     );
 
     const goingDown$ = scroll$.pipe(
-      filter(direction => direction === Direction.Down)
+      filter(direction => direction === 'down')
     );
 
-    goingUp$.subscribe(() => (this.isVisible = true));
-    goingDown$.subscribe(() => (this.isVisible = false));
+    goingUp$.subscribe();
+    goingDown$.subscribe();
   }
 }

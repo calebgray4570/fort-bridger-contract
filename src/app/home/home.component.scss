@@ -29,15 +29,58 @@
         cursor: pointer;
     }
 }
+.statue-img-mobile {
+    display: none;
+}
 
 .doc-wrap {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    // align-items: center;
     padding: 3em;
-    // embed {
-    //     min-height: 45em;
-    //     width: 90%;
-    // }
+}
+
+@media only screen and (max-width: 599px) {
+ .container {
+     padding: 0px;
+ }
+
+ .statue-img {
+     display: none;
+ }
+
+ .statue-img-mobile {
+     display: block;
+ }
+
+ .doc-wrap {
+     padding: 1em;
+ }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 850px) {
+    .container {
+        max-width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .statue-img {
+        display: none;
+    }
+
+    .statue-img-mobile {
+        display: block;
+    }
+    .doc-wrap {
+        padding: 1em;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .app-body {
+      padding-top: 22vh;
+    }
+    .statue-img {
+        width: 65%;
+    }
+    .doc-wrap {
+        padding: 1em;
+    }
 }
