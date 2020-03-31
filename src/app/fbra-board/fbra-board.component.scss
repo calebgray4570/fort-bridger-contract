@@ -36,4 +36,31 @@
     img {
         width: 25%;
     }
+    tr {
+        border: 1px solid grey;
+    }
+    td {
+        vertical-align: middle;
+    }
+}
+
+.table-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    p {
+        margin-bottom: 0.2em;
+    }
+    tr {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+    }
+    td {
+        vertical-align: middle;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
