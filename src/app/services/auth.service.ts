@@ -34,10 +34,12 @@ export class AuthService {
       )
   }
 
+
   async googleSignin() {
     const provider = new auth.GoogleAuthProvider();
-    const credential = await this.fireAuth.auth.signInWithPopup(provider);
-    return this.updateUserData(credential.user);
+    provider
+    const credential = await this.fireAuth.auth.signInWithPopup(provider).then((res) => console.log(res));
+    // return this.updateUserData(credential.user);
   }
 
   async signOut() {
@@ -46,13 +48,12 @@ export class AuthService {
   }
 
 
-  private updateUserData({ uid, email, displayName }: User) {
+  private updateUserData({ uid, email }: User) {
     // Sets user data to firestore on login
     const userRef: AngularFirestoreDocument<User> = this.fireStore.doc(`users/${uid}`);
     const data = {
       uid,
-      email,
-      displayName
+      email
     };
 
     return userRef.set(data, {merge: true});
