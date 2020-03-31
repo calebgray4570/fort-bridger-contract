@@ -46,5 +46,13 @@
       </ul>
       <p>If you have a questionable item, please contact the FBRA (Fort Bridger Rendezvous Association).</p>
     </div>
+    <div *ngFor="let content of contents">
+      <div class="doc-wrap" [innerHTML]="content.contentBody | sanitizeHtml"></div>
+    </div>
+
+    <form [formGroup]="contentForm" #form="ngForm" (ngSubmit)="formSubmit()">
+      <angular-editor formControlName="contentBody" [config]="config"></angular-editor>
+      <button class="button" [disabled]="form.invalid" type="submit">Save</button>
+    </form>
   </div>
 </div>

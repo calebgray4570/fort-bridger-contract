@@ -15,6 +15,13 @@ import { RegistrationComponent } from './registration/registration.component';
 import { FbraBoardComponent } from './fbra-board/fbra-board.component';
 import { EventsComponent } from './events/events.component';
 import { RulesAndRegsComponent } from './rules-and-regs/rules-and-regs.component';
+import { ContentService } from './services/content.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
 
 @NgModule({
   declarations: [
@@ -26,16 +33,25 @@ import { RulesAndRegsComponent } from './rules-and-regs/rules-and-regs.component
     RegistrationComponent,
     FbraBoardComponent,
     EventsComponent,
-    RulesAndRegsComponent
+    RulesAndRegsComponent,
+    SanitizeHtmlPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule, 
+    AngularEditorModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
         AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [
+    ContentService,
+    AngularFirestore,
+    AngularFireAuth
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
