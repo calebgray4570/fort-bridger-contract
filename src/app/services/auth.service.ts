@@ -34,6 +34,10 @@ export class AuthService {
       )
   }
 
+  get getCurrentUser() {
+    return this.user$;
+  }
+
 
   async googleSignin() {
     const provider = new auth.GoogleAuthProvider();

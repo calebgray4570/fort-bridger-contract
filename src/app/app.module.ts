@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
+import { ShowAuthedDirective } from './directives/show-authed.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     FbraBoardComponent,
     EventsComponent,
     RulesAndRegsComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    ShowAuthedDirective
   ],
   imports: [
     BrowserModule,

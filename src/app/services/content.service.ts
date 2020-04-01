@@ -18,4 +18,8 @@ export class ContentService {
     return this.firestore.collection('content').add(content);
   }
 
+  updateContent(content) {
+    return this.firestore.firestore.doc('content/' + content.uid).update(content);
+  }
+
 }

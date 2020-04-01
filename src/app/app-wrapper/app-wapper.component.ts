@@ -15,6 +15,7 @@ import {
   share,
   throttleTime
 } from 'rxjs/operators';
+import { AuthService } from '../services/auth.service';
 
 type VisibilityState = 'visable' | 'hiddenSmall' | 'hidden';
 type Direction = 'up' | 'down';
@@ -46,6 +47,8 @@ export class AppWrapperComponent implements AfterViewInit {
   public headerToggle: VisibilityState = 'visable';
   public directionToggle: Direction;
   private isVisible = true;
+
+  constructor(public auth: AuthService) {}
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {

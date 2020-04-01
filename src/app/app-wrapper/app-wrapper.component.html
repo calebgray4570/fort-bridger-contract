@@ -11,6 +11,10 @@
                 <div class="dropdown-content">
                     <a routerLink="events" routerLinkActive="active">Fort Bridger Events 2020</a>
                     <a routerLink="rules-and-regulations" routerLinkActive="active">Rules and Regulations</a>
+                    <a *ngIf="auth.user$ | async as user; else login" (click)="auth.signOut()">Admin Sign Out</a>
+                    <ng-template #login>
+                        <a (click)="auth.googleSignin()">Admin Login</a>
+                    </ng-template>
                 </div>
             </div>
         </div>
@@ -24,6 +28,12 @@
                     <a routerLink="registration" routerLinkActive="active">Registration</a>
                     <a routerLink="fbra-board" routerLinkActive="active">FBRA Board</a>
                     <a routerLink="rules-and-regulations" routerLinkActive="active">Rules and Regulations</a>
+                    <div *ngIf="auth.user$ | async as user; else login">
+                        <a (click)="auth.signOut()">Sign Out</a>
+                    </div>
+                    <ng-template #login>
+                        <a (click)="auth.googleSignin()">Login with Google</a>
+                    </ng-template>
                 </div>
             </div>
         </div>

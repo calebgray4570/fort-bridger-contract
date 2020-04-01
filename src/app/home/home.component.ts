@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit{
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    height: '15rem',
+    height: '30rem',
     minHeight: '5rem',
     placeholder: 'Enter text here...',
     translate: 'no',
@@ -43,6 +43,8 @@ export class HomeComponent implements OnInit{
     ]
   };
 
+  public editUid: string;
+
   constructor(
     private contentService: ContentService,
     private fb: FormBuilder
@@ -52,7 +54,6 @@ export class HomeComponent implements OnInit{
       (data) => {
         console.log('data: ', data);
         this.contents = data.map(e => {
-          console.log('e: ', e.payload.doc.data());
           return {
             uid: e.payload.doc.id,
             contentBody: e.payload.doc.data()['contentBody']
@@ -71,10 +72,29 @@ export class HomeComponent implements OnInit{
     })
   }
 
+  handleEditMode(content) {
+    console.log('content: ', content);
+    this.editUid = content.uid;
+    this.contentForm.controls.contentBody.setValue(content.contentBody)
+  }
+
   formSubmit(){
-    this.contentForm.value  
-    console.log('this.contentForm.value : ', this.contentForm.value );
-    this.contentService.createContent(this.contentForm.value).finally( () => this.contentForm.reset())
+    if (this.editUid) {
+      const contentObj = {
+        uid: this.editUid,
+        contentBody: this.contentForm.controls.contentBody.value
+      }
+      console.log('contentObj: ', contentObj);
+      this.contentService.updateContent(contentObj).finally( () => {
+        this.contentForm.reset();
+        this.editUid = null;
+      })
+    } else {
+      console.log('hit 2')
+      this.contentForm.value  
+      console.log('this.contentForm.value : ', this.contentForm.value );
+    }
+    // this.contentService.createContent(this.contentForm.value).finally( () => this.contentForm.reset())
   }
     
 }

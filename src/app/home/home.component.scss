@@ -38,6 +38,24 @@
     padding: 3em;
 }
 
+.button-row {
+    display: none;
+}
+
+.authed:hover {
+    border: 1px solid blue;
+    border-radius: 5px;
+    .doc-wrap {
+        padding: 1em;
+    }
+    .button-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @media only screen and (max-width: 599px) {
  .container {
      padding: 0px;
