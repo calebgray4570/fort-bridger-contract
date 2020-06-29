@@ -10,6 +10,20 @@
     background-color: #fdfd00d4;
 }
 
+.facebook-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    a {
+        width: 21%;
+    }
+    img {
+        min-height: 5em;
+        width: 100%;
+    }
+}
+
 .state-link-wrap {
     display: flex;
     flex-direction: row;
